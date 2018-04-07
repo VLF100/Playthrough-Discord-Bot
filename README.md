@@ -1,17 +1,23 @@
 INSTRUCTIONS
 
 	* Set up the token in a environment variable. If you use a unix based system you can just edit the app-env file and use it:
-		```bash
-		. ./app-env.sh
-		```
+		
+```bash
+. ./app-env.sh
+```
+		
 		* You can also hardcode it into the main.py file in this line
-		```python
-		client.run("YOUR_TOKEN_HERE")
-		```
+		
+```python
+client.run("YOUR_TOKEN_HERE")
+```
+		
 	* Start it with:
-		```python
-		python3 main.py
-		```
+	
+```
+python3 main.py
+```
+		
 
 FEATURES
 
