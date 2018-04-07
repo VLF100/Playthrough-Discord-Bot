@@ -1,22 +1,29 @@
-INSTRUCTIONS
+### INSTRUCTIONS
 
-	* Set up the token in a environment variable. If you use a unix based system you can just edit the app-env file and use it:
-		```bash
-		. ./app-env.sh
-		```
-		* You can also hardcode it into the main.py file in this line
-		```python
-		client.run("YOUR_TOKEN_HERE")
-		```
-	* Start it with:
-		```python
-		python3 main.py
-		```
+1. Set up the token in a environment variable. 
+If you use a unix based system you can just edit the app-env file and use it:
+		
+```bash
+	. ./app-env.sh
+```
+		
+   * Alternatively, you can "hardcode" it into the main.py file in this line	
 
-FEATURES
+```python
+	client.run("YOUR_TOKEN_HERE")
+```
+		
+2. Start it with:
+	
+```
+	python3 main.py
+```
+		
 
-	* Easy way for customization. Just edit the configuration.py file!
-	* Log of roles given and to whom. Easily enabled and disabled.
+### FEATURES
+
+* Easy way for customization. Just edit the configuration.py file!
+* Log of roles given and to whom. Easily enabled and disabled.
 
 
 
