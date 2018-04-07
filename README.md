@@ -22,8 +22,8 @@ If you use a unix based system you can just edit the app-env file and use it:
 
 ### FEATURES
 
-	* Easy way for customization. Just edit the configuration.py file!
-	* Log of roles given and to whom. Easily enabled and disabled.
+* Easy way for customization. Just edit the configuration.py file!
+* Log of roles given and to whom. Easily enabled and disabled.
 
 
 
