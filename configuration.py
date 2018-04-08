@@ -8,17 +8,20 @@ cc = "!" 	# Character used to call the bot
 	# third word is the role to give to the user
 	# the number specifies if the previous roles before that one should be deleted when giving it
 		# set to 1 to delete previous roles with 0, or to 0 to keep them
-		# recommended use: for linear story use 0 and for non-linear/branching stories when the order of play may change use 1
 # Example ["finished", "chapter1", "beginner",0]
 	# call with !finished chapter1
 	# gives user the role of beginner
 	# keeps roles before this one, in this case because it is the first one it does nothing
 conf_call_roles = [
-	["finished","chapter1","beginner",0],
-	["finished","chapter2","intermediate",0],
-	["finished","branchA","branch A",1],
-	["finished","branchB","branch B",1],
-	["finished","chapter3","completed",1]
+	["finished","door1","Rose Manor",1],
+	["finished","door2","Weeping Manor",1],
+	["finished","door3","Pig Iron Manor",1],
+	["finished","door4","Misty Manor",1],
+	["finished","door5","Fifth Door",1],
+	["finished","door6","Sixth Door",1],
+	["finished","door7","Seventh Door",1],
+	["finished","door8","Final Door",1],
+	["finished","all","Fata Morgana",1]
 ]
 
 # Set to 1 to activate logs, set to 0 to deactivate them
