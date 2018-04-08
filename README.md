@@ -1,13 +1,7 @@
 ### INSTRUCTIONS
 
 1. Set up the token in a environment variable. 
-If you use a unix based system you can just edit the app-env file and use it:
-		
-```bash
-	. ./app-env.sh
-```
-		
-   * Alternatively, you can "hardcode" it into the main.py file in this line	
+   * Alternatively, you can "hardcode" it into the main.py file in this line.
 
 ```python
 	client.run("YOUR_TOKEN_HERE")
@@ -19,7 +13,6 @@ If you use a unix based system you can just edit the app-env file and use it:
 	python3 main.py
 ```
 		
-
 ### FEATURES
 
 * Easy way for customization. Just edit the configuration.py file!
@@ -27,9 +20,9 @@ If you use a unix based system you can just edit the app-env file and use it:
 
 
 
-TODO
+### TODO
 
-	v1.1 Test roles with spaces
+	v1.1 Use roles with spaces
 	v1.1 Only act in some channels
 	v1.2 Empty arguments or empty command
 	v1.3 Edit configuration dinamically and reload
