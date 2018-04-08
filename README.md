@@ -22,7 +22,7 @@
 
 ### TODO
 
-	v1.1 Use roles with spaces
+	v1.0.5 Refactor and clean code
 	v1.1 Only act in some channels
 	v1.2 Empty arguments or empty command
 	v1.3 Edit configuration dinamically and reload
