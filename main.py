@@ -3,9 +3,9 @@ import asyncio
 
 import os # Read token variable from environment
 
-import aux # Auxiliar functions
-
 from configuration import * # Read configuration
+
+import copy
 
 client = discord.Client()
 
@@ -16,39 +16,42 @@ async def on_ready():
     print(client.user.id)
     print('------')
 
+
+def get_max_role(roles):
+    max_role = -1
+    for role in conf_call_roles:
+        for r in roles:
+            if(r.name==role[2]):
+                max_role = conf_call_roles.index(role)
+    return max_role
+
+
 @client.event
 async def on_message(message):
     if message.content.startswith(cc):
         call_arguments = message.content.split(cc)
         call_arguments = call_arguments[1].split(" ")
-        for comm,arg,role in conf_call_roles:
+        for role in conf_call_roles:
+            comm = role[0]
+            arg = role[1]
+            role_name = role[2]
             if (comm == call_arguments[0] and arg == call_arguments[1]):
-                role = discord.utils.get(message.server.roles, name=role)
-                await client.add_roles(message.author,role)
-
-                if(logs):
-                    print("Role "+role.name+" applied to user "+ message.author.name)
-                
-                if(rm_prev):
-                    rm_roles = []
-                    index = 0
-                    while conf_call_roles[index][2] != role.name:
-                        rm_roles += discord.utils.get(message.server.roles, name=role)
-                        index += 1
-                    await client.remove_roles(message.author,rm_roles)
+                add_role = discord.utils.get(message.server.roles, name=role_name)
+                role_list = copy.deepcopy(message.author.roles)
+                if(get_max_role(role_list) < conf_call_roles.index(role)):
+                    await client.add_roles(message.author,add_role)
                     if(logs):
-                        for rm_rol in rm_roles:
-                            print("Role "+rm_rol+" removed from user "+ message.author.name)
-
-                if(final_role):
-                    if(role.name == conf_call_roles[-1][2]):
-                        rm_roles = []
+                        print("Role "+add_role.name+" applied to user "+ message.author.name)
+                
+                    if(rm_prev or (final_role and add_role.name == conf_call_roles[-1][2])):
                         index = 0
-                        while conf_call_roles[index][2] != role.name:
-                            rm_roles += discord.utils.get(message.server.roles, name=role)
+                        while conf_call_roles[index][2] != add_role.name:
+                            for r in role_list:
+                                if r.name == conf_call_roles[index][2]:
+                                    role_list.remove(r)
+                                    break
                             index += 1
-                        await client.remove_roles(message.author,rm_roles)
-                        if(logs):
-                            print("Final Role "+role.name+" given to user "+ message.author.name)
+                        role_list.append(add_role)
+                        await client.replace_roles(message.author,*role_list)
 
 client.run(os.environ['TOKEN'])

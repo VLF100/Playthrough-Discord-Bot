@@ -29,9 +29,8 @@ If you use a unix based system you can just edit the app-env file and use it:
 
 TODO
 
-	If user has already role do nothing
-	What happens if role doesnt exist
-	Empty arguments or empty command
-	Option to disable logs
-	Edit configuration dinamically and reload
-	Test roles with spaces
+	v1.1 Test roles with spaces
+	v1.1 Only act in some channels
+	v1.2 Empty arguments or empty command
+	v1.3 Edit configuration dinamically and reload
+
