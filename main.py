@@ -35,19 +35,14 @@ async def on_message(message):
             comm = role[0]
             arg = role[1]
             role_name = role[2]
-            linearity = not(role[3])
+            delete_prev = role[3]
             if (comm == call_arguments[0] and arg == call_arguments[1]):
                 add_role = discord.utils.get(message.server.roles, name=role_name)
                 role_list = copy.deepcopy(message.author.roles)
                 user_max_role = get_max_role(role_list)
-                if((not(linearity) and user_max_role != (len(conf_call_roles)-1)) or 
-                    (linearity and user_max_role < conf_call_roles.index(role))):
+                if((user_max_role < conf_call_roles.index(role))):
                     
-                    await client.add_roles(message.author,add_role)
-                    if(logs):
-                        print("Role "+add_role.name+" applied to user "+ message.author.name)
-                
-                    if(linearity or (final_role and role_name == conf_call_roles[-1][2])):
+                    if(delete_prev or (final_role and role_name == conf_call_roles[-1][2])):
                         index = 0
                         while conf_call_roles[index][2] != add_role.name:
                             for r in role_list:
@@ -55,7 +50,10 @@ async def on_message(message):
                                     role_list.remove(r)
                                     break
                             index += 1
-                        role_list.append(add_role)
-                        await client.replace_roles(message.author,*role_list)
 
+                    role_list.append(add_role)
+                    await client.replace_roles(message.author,*role_list)
+                    if(logs):
+                        print("Role "+add_role.name+" applied to user "+ message.author.name)
+                
 client.run(os.environ['TOKEN'])

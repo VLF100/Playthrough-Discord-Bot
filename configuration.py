@@ -7,7 +7,7 @@ cc = "!" 	# Character used to call the bot
 	# second word is the argument of the command
 	# third word is the role to give to the user
 	# the number specifies if the previous roles before that one should be deleted when giving it
-		# set to 1 to delete previous roles with 0, or to 0 to keep them
+		# set to 1 to delete previous roles, or to 0 to keep them
 # Example ["finished", "chapter1", "beginner",0]
 	# call with !finished chapter1
 	# gives user the role of beginner
