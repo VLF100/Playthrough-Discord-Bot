@@ -21,3 +21,6 @@ six==1.11.0
 sklearn==0.0
 websockets==3.4
 youtube-dl==2018.4.9
+opuslib
+cffi --only-binary all; 
+colorlog
