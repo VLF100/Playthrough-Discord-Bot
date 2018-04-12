@@ -10,6 +10,7 @@ matplotlib==2.1.0
 multidict==4.1.0
 numpy==1.13.3
 pycparser==2.18
+PyNaCl==1.0.1
 pyparsing==2.2.0
 python-dateutil==2.6.1
 pytz==2017.3
