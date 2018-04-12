@@ -1,11 +1,11 @@
-build-essential unzip -y
-software-properties-common -y
-:repo:ppa:mc3man/xerus-media -y
-libav-tools -y
-libopus-dev -y
-libffi-dev -y
-libsodium-dev -y
-ffmpeg -y
+build-essential unzip 
+software-properties-common 
+:repo:ppa:mc3man/xerus-media 
+libav-tools 
+libopus-dev 
+libffi-dev 
+libsodium-dev 
+ffmpeg 
 libopus0
 git
 libssl-dev
