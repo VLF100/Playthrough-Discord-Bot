@@ -1,13 +1,14 @@
-libopus0
-git
+build-essential unzip -y
+software-properties-common -y
+:repo:ppa:deadsnakes -y
+:repo:ppa:mc3man/trusty-media -y
+:repo:ppa:chris-lea/libsodium -y
+:repo:ppa:mc3man/xerus-media -y
+libav-tools -y
 libopus-dev -y
-libssl-dev
 libffi-dev -y
 libsodium-dev -y
-:repo:ppa:mc3man/xerus-media -y
-
-build-essential -y
-unzip -y
-software-properties-common -y
-
-
+ffmpeg -y
+libopus0
+git
+libssl-dev
