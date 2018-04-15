@@ -13,14 +13,14 @@ cc = "!" 	# Character used to call the bot
 	# gives user the role of beginner
 	# keeps roles before this one, in this case because it is the first one it does nothing
 conf_call_roles = [
-	["finished","door1","Rose Manor",1],
-	["finished","door2","Weeping Manor",1],
-	["finished","door3","Pig Iron Manor",1],
-	["finished","door4","Misty Manor",1],
-	["finished","door5","Fifth Door",1],
-	["finished","door6","Sixth Door",1],
-	["finished","door7","Seventh Door",1],
-	["finished","door8","Final Door",1],
+	["reading","door1","Rose Manor",1],
+	["reading","door2","Weeping Manor",1],
+	["reading","door3","Pig Iron Manor",1],
+	["reading","door4","Misty Manor",1],
+	["reading","door5","Fifth Door",1],
+	["reading","door6","Sixth Door",1],
+	["reading","door7","Seventh Door",1],
+	["reading","door8","Final Door",1],
 	["finished","all","Fata Morgana",1]
 ]
 
