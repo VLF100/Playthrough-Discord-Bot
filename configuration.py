@@ -21,7 +21,8 @@ conf_call_roles = [
 	["reading","door6","Sixth Door",1],
 	["reading","door7","Seventh Door",1],
 	["reading","door8","Final Door",1],
-	["finished","all","Fata Morgana",1]
+	["finished","all","Fata Morgana",1],
+	["finished","requiem","Requiem for Innocence",0]
 ]
 
 # Set to 1 to activate logs, set to 0 to deactivate them
@@ -30,4 +31,4 @@ logs = 1
 
 # Set to 1 to remove all previous roles 
 # when the last role of the list is given, set to 0 to still keep them
-final_role = 1
+final_role = 0
