@@ -13,11 +13,16 @@ cc = "!" 	# Character used to call the bot
 	# gives user the role of beginner
 	# keeps roles before this one, in this case because it is the first one it does nothing
 conf_call_roles = [
-	["finished","chapter1","beginner",0],
-	["finished","chapter2","intermediate",0],
-	["finished","branchA","branch A",1],
-	["finished","branchB","branch B",1],
-	["finished","chapter3","completed",1]
+	["reading","door1","Rose Manor",1],
+	["reading","door2","Weeping Manor",1],
+	["reading","door3","Pig Iron Manor",1],
+	["reading","door4","Misty Manor",1],
+	["reading","door5","Fifth Door",1],
+	["reading","door6","Sixth Door",1],
+	["reading","door7","Seventh Door",1],
+	["reading","door8","Final Door",1],
+	["finished","all","Fata Morgana",1],
+	["finished","requiem","Requiem for Innocence",0]
 ]
 
 # Set to 1 to activate logs, set to 0 to deactivate them
@@ -26,4 +31,4 @@ logs = 1
 
 # Set to 1 to remove all previous roles 
 # when the last role of the list is given, set to 0 to still keep them
-final_role = 1
+final_role = 0
