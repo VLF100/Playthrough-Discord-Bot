@@ -6,6 +6,7 @@ import os # Read token variable from environment
 from configuration import * # Read configuration
 
 import copy
+from random import randint
 
 client = discord.Client()
 
@@ -72,6 +73,15 @@ def get_max_role(roles):
 async def on_message(message):
     global music_service
     global music_lock
+
+    if message.content.startswith("-random"):
+    	split_random = message.content.split(" ")
+    	try:
+    		maxnumber_random = int(split_random[1])
+    		result_random = randint(1,maxnumber_random)
+    		await message.channel.send("Number is: "+str(result_random))
+    	except Exception as e:
+    		print("Number not valid: "+split_random[1])
 
     if message.content.startswith(cc):
         call_arguments = message.content.split(" ")
